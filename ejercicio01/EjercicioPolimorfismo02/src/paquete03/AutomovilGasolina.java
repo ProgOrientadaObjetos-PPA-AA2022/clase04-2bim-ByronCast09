@@ -16,6 +16,13 @@ public class AutomovilGasolina extends Automovil {
     protected double costoGalon;
     protected double iva;
     protected double totalCancelaG;
+
+    public AutomovilGasolina(double numGalonesMaximos, double costoGalon, double iva, String nomP,String pla) {
+        super(nomP,pla);
+        this.numGalonesMaximos = numGalonesMaximos;
+        this.costoGalon = costoGalon;
+        this.iva = iva;
+    }
     
     
     public void establecerNumGalonesMaximos(double e){
@@ -33,7 +40,7 @@ public class AutomovilGasolina extends Automovil {
     
     @Override
     public void calcularValorCancelar(){
-        totalCancelaG = (costoGalon * numGalonesMaximos)+(0.1)*(costoGalon * numGalonesMaximos)* (numGalonesMaximos);
+        totalCancelaG = (costoGalon * numGalonesMaximos)+(0.10)*(costoGalon * numGalonesMaximos)* (numGalonesMaximos);
     }
     //----------------------------------------
     public double obtenerNumGalonesMaximos() {

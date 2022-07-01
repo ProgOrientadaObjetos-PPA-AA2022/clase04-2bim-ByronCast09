@@ -13,15 +13,13 @@ import paquete03.AutomovilGasolina;
  */
 public class Ejecutor {
     public static void main(String[] args) {
-        AutomovilGasolina autoG = new AutomovilGasolina();
-        autoG.establecerNombresPropietario("Byron Castillo");
-        autoG.establecerPlaca("LGFD65H");
-        autoG.establecerCostoGalon(3.0);
-        autoG.establecerNumGalonesMaximos(20.00);
-        autoG.establecerIva(0.1);
+        AutomovilGasolina autoG = new AutomovilGasolina(20.00,3.0,0.10,"Byron Castillo","JSHD4544");
+        
         autoG.obtenerCostoGalon();
+        autoG.obtenerPlaca();
         autoG.obtenerNumGalonesMaximos();
         autoG.obtenerTotalCancela();
+        autoG.calcularValorCancelar();
         System.out.print(autoG);
     }
 }

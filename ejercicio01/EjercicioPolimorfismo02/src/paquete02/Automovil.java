@@ -14,7 +14,10 @@ public abstract class Automovil {
     protected String placa;
     protected double valorCancelar;
     
-    
+    public Automovil(String nomP,String pla){
+        nombrePropietario = nomP;
+        placa = pla;
+    }
     public void establecerNombresPropietario(String e){
         nombrePropietario = e;
     }
@@ -30,17 +33,14 @@ public abstract class Automovil {
     public String obtenerPlaca(){
         return placa;  
     }
-    public double obtenerValorCancelar(){
-        return valorCancelar;  
-    }
+    
     @Override
     public String toString(){
         String cadena = String.format("Nombres del Propietario: %s\n"
-                + "Placas: %s\n"
-                + "Valor a Cancelar: %.2f\n",
+                + "Placas: %s\n",
                 nombrePropietario,
-                placa,
-                valorCancelar);
+                placa
+                );
         return cadena;
     }
 }

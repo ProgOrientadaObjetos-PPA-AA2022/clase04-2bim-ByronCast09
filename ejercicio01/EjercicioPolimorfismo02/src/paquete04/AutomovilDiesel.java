@@ -16,6 +16,13 @@ public class AutomovilDiesel extends Automovil {
     protected double costoCadaLitro;
     protected double descuentoLitros;
     protected double totalCancelaD;
+
+    public AutomovilDiesel(double numeroLitrosMaximosTanque, double costoCadaLitro, double descuentoLitros, String nomP,String pla) {
+        super(nomP,pla);
+        this.numeroLitrosMaximosTanque = numeroLitrosMaximosTanque;
+        this.costoCadaLitro = costoCadaLitro;
+        this.descuentoLitros = descuentoLitros;
+    }
     
     public void establecerNumeroLitrosMaximosTanque(double e){
         numeroLitrosMaximosTanque = e;
