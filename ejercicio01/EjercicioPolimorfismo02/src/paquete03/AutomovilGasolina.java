@@ -40,7 +40,7 @@ public class AutomovilGasolina extends Automovil {
     
     @Override
     public void calcularValorCancelar(){
-        totalCancelaG = (costoGalon * numGalonesMaximos)+(0.10)*(costoGalon * numGalonesMaximos)* (numGalonesMaximos);
+        totalCancelaG = (costoGalon * numGalonesMaximos)+(0.10)*(costoGalon * numGalonesMaximos);
     }
     //----------------------------------------
     public double obtenerNumGalonesMaximos() {

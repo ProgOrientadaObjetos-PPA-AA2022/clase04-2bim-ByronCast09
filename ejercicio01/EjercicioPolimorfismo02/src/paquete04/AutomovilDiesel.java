@@ -21,7 +21,7 @@ public class AutomovilDiesel extends Automovil {
         super(nomP,pla);
         this.numeroLitrosMaximosTanque = numeroLitrosMaximosTanque;
         this.costoCadaLitro = costoCadaLitro;
-        this.descuentoLitros = descuentoLitros;
+         establecerDescuentoLitros(descuentoLitros);
     }
     
     public void establecerNumeroLitrosMaximosTanque(double e){
@@ -31,11 +31,11 @@ public class AutomovilDiesel extends Automovil {
         costoCadaLitro = e;
     }
     public void establecerDescuentoLitros(double e){
-        descuentoLitros = e;
+        descuentoLitros = numeroLitrosMaximosTanque*(e / 100);
     }
     @Override
     public void calcularValorCancelar(){
-        totalCancelaD = (costoCadaLitro *(numeroLitrosMaximosTanque *descuentoLitros ));
+        totalCancelaD = (costoCadaLitro *(numeroLitrosMaximosTanque -descuentoLitros ));
     }
     //----------------------------------
     public double obtenerNumeroLitrosMaximosTanque() {

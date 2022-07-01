@@ -6,6 +6,7 @@
 package paquete01;
 
 import paquete03.AutomovilGasolina;
+import paquete04.AutomovilDiesel;
 
 /**
  *
@@ -21,5 +22,11 @@ public class Ejecutor {
         autoG.obtenerTotalCancela();
         autoG.calcularValorCancelar();
         System.out.print(autoG);
+        
+        AutomovilDiesel autoD = new AutomovilDiesel(20.00,2.00,10.00,"Kevin Saraguro","L54F45");
+        
+        autoD.calcularValorCancelar();
+        System.out.println("");
+        System.out.print(autoD);
     }
 }
