@@ -15,8 +15,14 @@ public class ArriendoLocalSesiones extends Arriendo{
     protected double valorSillas;
     protected double valorAmplificacion;
     
-    public ArriendoLocalSesiones(String nombre, double cuotaB){
-        super(nombre, cuotaB);
+    public ArriendoLocalSesiones(Propietario pro,double arrM,double cuotaB) {
+        super(pro,arrM,cuotaB);
+    }
+    
+    public ArriendoLocalSesiones(Propietario pro,double arrM,double cuotaB,double valS,double valAm){
+        super(pro,arrM,cuotaB);
+        valorSillas =valS;
+        valorAmplificacion = valAm;
     }
     
     public void establecerValorSillas(double x){
@@ -49,7 +55,7 @@ public class ArriendoLocalSesiones extends Arriendo{
                 + "Valor sillas: %.2f\n"
                 + "Valor amplificacion: %.2f\n"
                 + "Arriendo Total: %.2f\n", 
-                obtenerNombreArrendatario(),
+                obtenerArrendatario(),
                 obtenerCuotaBase(),
                 obtenerValorSillas(),
                 obtenerValorAmplificacion(),

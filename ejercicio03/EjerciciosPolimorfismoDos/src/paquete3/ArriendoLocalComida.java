@@ -15,16 +15,20 @@ public class ArriendoLocalComida extends Arriendo {
     private double valorAgua;
     private double iva;
     
-    public ArriendoLocalComida(String nombre, double cuotaB){
-        super(nombre, cuotaB);
+    public ArriendoLocalComida(Propietario pro,double arrM,double cuotaB) {
+        super(pro,arrM,cuotaB);
     }
-    
-    public ArriendoLocalComida(String nombre, double cuotaB, double vl, 
+    /*
+    public ArriendoLocalComida(Propietario pro,double arrM, double cuotaB, double vl, 
             double va, double iv){
-        super(nombre, cuotaB);
+        super(pro,arrM,cuotaB);
         valorAgua = va;
         valorLuz = vl;
         iva = iv;
+    }
+    */
+    public void establecerNombreArrendatario(Propietario n){
+        arrendatario = n;
     }
     
     public void establecerValorLuz(double x){
@@ -67,7 +71,7 @@ public class ArriendoLocalComida extends Arriendo {
                 + "Valor agua: %.2f\n"
                 + "Porcentaje iva: %.2f\n"
                 + "Arriendo Total: %.2f\n", 
-                obtenerNombreArrendatario(),
+                obtenerArrendatario(),
                 obtenerCuotaBase(),
                 obtenerValorLuz(),
                 obtenerValorAgua(),

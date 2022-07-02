@@ -15,13 +15,13 @@ public class ArriendoLocalComercial extends Arriendo {
 
     protected double valorAdicionalFijo;
 
-    public ArriendoLocalComercial(String nombre, double cuotaB) {
-        super(nombre, cuotaB);
+    public ArriendoLocalComercial(Propietario pro,double arrM,double cuotBase) {
+        super(pro,arrM,cuotBase);
     }
 
     @Override
-    public void establecerNombreArrendatario(String nombre) {
-        nombreArrendatario = nombre.toUpperCase();
+    public void establecerArrendatario(Propietario nombre) {
+        arrendatario = nombre;
     }
 
     public void establecerValorAdicionalFijo(double x) {
@@ -39,12 +39,12 @@ public class ArriendoLocalComercial extends Arriendo {
 
     @Override
     public String toString() {
-        String cadena = String.format("Ariendo de Local Comercial\n"
+        String cadena = String.format("Arriendo de Local Comercial\n"
                 + "Nombre Arrendatario: %s\n"
                 + "Cuota base: %.2f\n"
                 + "Valor adicional fijo: %.2f\n"
                 + "Arriendo Total: %.2f\n",
-                obtenerNombreArrendatario(),
+                obtenerArrendatario(),
                 obtenerCuotaBase(),
                 obtenerValorAdicionalFijo(),
                 obtenerArriendoMensual());
